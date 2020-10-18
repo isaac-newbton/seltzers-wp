@@ -1,4 +1,15 @@
 <?php
+define('ACA_INCLUDE_PATH', get_stylesheet_directory() . '/inc/');
+
+include_once ACA_INCLUDE_PATH . 'custom-post-types.php';
+include_once ACA_INCLUDE_PATH . 'acf-setup.php';
+
+add_theme_support('post-thumbnails', [
+	'post',
+	'product',
+	'recipe'
+]);
+
 function aca_register_styles() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
