@@ -1,0 +1,100 @@
+.menu-wrapper {
+    font: 1.5rem/1.5 Raleway;
+}
+
+.menu-item {
+    display: flex;
+    flex-flow: column nowrap;
+
+    > a, > button {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        background: unset;
+        border: unset;
+        text-decoration: underline;
+        font: inherit;
+        color: black;
+        vertical-align: middle;
+        place-items: center;
+        box-sizing: border-box;
+        padding: 1ch;
+        text-transform: uppercase;
+        letter-spacing: unset;
+        font-weight: 900;
+
+        &:focus {
+            outline: 3px dotted black;
+        }
+    }
+}
+
+.sub-menu {
+    background: #001b72;
+    border-radius: 20px;
+
+    > li > a, > li > button {
+        padding-left: 2ch;
+        color: #ffffff;
+
+        @media(min-width: $nav_breakpoint) {
+            padding-left: 1ch;
+        }
+    }
+
+    &[aria-hidden="false"] {
+
+        &:before {
+            content: '';
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid #fff;
+            border-bottom: 20px solid transparent;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+        }
+    }
+
+    .sub-menu {
+        background-color: #c7f;
+        border-radius: 0;
+        margin: 0;
+
+        &[aria-hidden="false"] {
+
+            &:before {
+                content: '';
+                width: 0px;
+                height: 0px;
+                position: absolute;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-top: 20px solid transparent;
+                border-bottom: 20px solid #c7f;
+                right: 50%;
+                top: -38px;
+
+                @media(min-width: $nav_breakpoint) {
+                    border-left: 20px solid transparent;
+                    border-right: 20px solid #c7f;
+                    border-top: 20px solid transparent;
+                    border-bottom: 20px solid transparent;
+                    top: 0.67rem;
+                    left: -38px;
+                }
+            }
+        }
+
+        > li > a, .sub-menu > li > button {
+            padding-left: 3ch;
+
+            @media(min-width: $nav_breakpoint) {
+                padding-left: 1ch;
+            }
+        }
+    }
+}

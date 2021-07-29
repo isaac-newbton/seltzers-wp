@@ -1,0 +1,51 @@
+/**
+ * Based on https://css-tricks.com/in-praise-of-the-unambiguous-click-menu/
+ */
+
+ .click-menu ul {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    
+    @media(min-width: $nav_breakpoint) {
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+}
+
+.click-menu.no-js li:hover > .sub-menu {
+    visibility: visible;
+}
+
+.click-menu.no-js li:focus-within > .sub-menu {
+    visibility: visible;
+}
+
+.click-menu {
+    
+    ul[aria-hidden="false"] {
+        visibility: visible;
+        position: relative;
+        top: unset;
+        left: unset;
+    }
+
+    button > svg {
+        width: 1em;
+        height: 1em;
+        margin-left: 0.5em;
+    }
+
+    @media(min-width: $nav_breakpoint) {
+        .sub-menu--right {
+            left: auto !important;
+            right: 0 !important;
+        }
+
+        .sub-menu button > svg {
+            transform: rotateZ(-90deg);
+        }
+    }
+}
