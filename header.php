@@ -14,46 +14,46 @@
 
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
-                <main id="main" class="site-main" role="main">
-                    <svg xmlns="http://www.w3.org/2000/svg" hidden="hidden">
-                        <symbol id="arrow" viewbox="0 0 16 16" >
-                            <polyline points="4 6, 8 10, 12 6" stroke="#000" stroke-width="2" fill="transparent" stroke-linecap="round" />
-                        </symbol>
-                    </svg>
-                    <header id="site-header" class="site-header">
-                        <div class="header-wrapper">
-                            <div class="header-content-container">
-                                <div class="header-logo-container">
-                                    <?php the_custom_logo(); ?>
-                                </div>
-                            </div>
-                            <div class="header-menu-wrapper">
-                                <?php
-                                wp_nav_menu([
-                                    'theme_location'  => 'primary',
-                                    'menu_class'      => 'menu-wrapper',
-                                    'container_id'    => 'primary-menu-container',
-                                    'container_class' => 'primary-menu-container',
-                                    'items_wrap'      => '<ul id="primary-menu-list" class="click-menu %2$s">%3$s</ul>',
-                                    'fallback_cb'     => false,
-                                ]);
-
-                                wp_nav_menu([
-                                    'theme_location'  => 'secondary',
-                                    'menu_class'      => 'menu-wrapper',
-                                    'container_id'    => 'secondary-menu-container',
-                                    'container_class' => 'secondary-menu-container',
-                                    'items_wrap'      => '<ul id="secondary-menu-list" class="%2$s">%3$s</ul>',
-                                    'fallback_cb'     => false,
-                                ]);
-                                ?>
-                                <div class="header-search-container">
-                                    <form action="<?php bloginfo('url') ?>" role="search">
-                                        <label for="header-search-input" class="sr_only">Search for:</label>
-                                        <input type="text" id="header-search-input" name="s" placeholder="search..." value="<?=get_search_query()?>">
-                                        <button type="submit" aria-label="Submit"><i class="fa fa-search"></i></button>
-                                    </form>
-                                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" hidden="hidden">
+                    <symbol id="arrow" viewbox="0 0 16 16" >
+                        <polyline points="4 6, 8 10, 12 6" stroke="#000" stroke-width="2" fill="transparent" stroke-linecap="round" />
+                    </symbol>
+                </svg>
+                <header id="site-header" class="site-header">
+                    <div class="header-wrapper">
+                        <div class="header-content-container">
+                            <div class="header-logo-container">
+                                <?php the_custom_logo(); ?>
                             </div>
                         </div>
-                    </header>
+                        <div class="header-menu-wrapper">
+                            <?php
+                            wp_nav_menu([
+                                'theme_location'  => 'primary',
+                                'menu_class'      => 'menu-wrapper',
+                                'container_id'    => 'primary-menu-container',
+                                'container_class' => 'primary-menu-container',
+                                'items_wrap'      => '<ul id="primary-menu-list" class="click-menu %2$s">%3$s</ul>',
+                                'fallback_cb'     => false,
+                            ]);
+
+                            wp_nav_menu([
+                                'theme_location'  => 'secondary',
+                                'menu_class'      => 'menu-wrapper',
+                                'container_id'    => 'secondary-menu-container',
+                                'container_class' => 'secondary-menu-container',
+                                'items_wrap'      => '<ul id="secondary-menu-list" class="%2$s">%3$s</ul>',
+                                'fallback_cb'     => false,
+                            ]);
+                            ?>
+                            <div class="header-search-container">
+                                <form action="<?php bloginfo('url') ?>" role="search">
+                                    <label for="header-search-input" class="sr_only">Search for:</label>
+                                    <input type="text" id="header-search-input" name="s" placeholder="search..." value="<?=get_search_query()?>">
+                                    <button type="submit" aria-label="Submit"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <main id="main" class="site-main" role="main">

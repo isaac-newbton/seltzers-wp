@@ -57,6 +57,7 @@ function aca_theme_styles_and_scripts() {
      * Javascripts
      */
     wp_enqueue_script( 'aca-theme-click-menu', get_template_directory_uri() . '/assets/js/click-menu.js', [], $theme_version );
+    wp_enqueue_script( 'aca-theme-motion-text', get_template_directory_uri() . '/assets/js/motion-text.js', [], $theme_version );
     wp_register_script('fontawesome-script', get_stylesheet_directory_uri() . '/inc/fontawesome/js/all.min.js', [], ACA_FONTAWESOME_VERSION);
     wp_enqueue_script('fontawesome-script');
 }

@@ -1,0 +1,49 @@
+.search {
+
+    .results_container {
+
+        ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        li {
+            margin-left: 0;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        article {
+
+            h2 {
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size: 2.5rem;
+                line-height: 1;
+                font-weight: 900;
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+
+            .permalink {
+                line-height: 1;
+                font-weight: 600;
+            }
+
+            .excerpt {
+                line-height: 1;
+            }
+        }
+    }
+
+    .search-results {
+
+    }
+
+    .search-no-results {
+
+    }
+}

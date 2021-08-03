@@ -392,7 +392,7 @@ input[type="reset"],
 input[type="submit"] {
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	background: #cd2653;
+	background: $accent_blue;
 	border: none;
 	border-radius: 0;
 	color: #fff;
@@ -447,4 +447,15 @@ input[type="search"]:focus {
 
 *[hidden="hidden"] {
 	display: none !important;
+}
+
+@media(min-width: $nav_breakpoint){
+	.flex_half {
+		display: flex;
+		flex-wrap: wrap;
+
+		> * {
+			flex: 0 0 50%;
+		}
+	}
 }

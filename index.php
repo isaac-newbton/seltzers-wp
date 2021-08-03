@@ -1,10 +1,10 @@
 <?php
 get_header();
-?>
 
-<main id="site_content" role="main">
+/**
+ * <main>
+ */
 
-<?php
 if(have_posts()){
 	$i = 0;
 	while(have_posts()){
@@ -16,9 +16,9 @@ if(have_posts()){
 		get_template_part('template-parts/content', get_post_type());
 	}
 }
-?>
 
-</main>
+/**
+ * </main>
+ */
 
-<?php
 get_footer();

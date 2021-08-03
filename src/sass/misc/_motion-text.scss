@@ -1,0 +1,51 @@
+.motion_text_wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-top: 3px solid $accent_yellow;
+    padding-top: 0.75rem;
+    font-size: min(calc(1.8rem + 2vw), 3.0rem);
+
+    .static {
+        flex-grow: 0;
+        color: $accent_yellow;
+        margin-inline-end: 0.25em;
+    }
+
+    .dynamic {
+        position: relative;
+
+        > div {
+
+            &.inactive {
+                visibility: hidden;
+                height: 1px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+            }
+
+            &.active {
+                position: relative;
+                visibility: initial;
+                height: initial;
+                animation-name: fadein;
+                animation-duration: 400ms;
+            }
+        }
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        top: 1em;
+    }
+
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}

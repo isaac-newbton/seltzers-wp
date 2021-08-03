@@ -1,5 +1,11 @@
 $nav_breakpoint: 800px;
-$content_max_width: 100rem;
+$content_max_width: 90rem;
+$background_max_width: max(120rem, calc(100vw - 200px));
+$header_max_width: calc(max(120rem, calc(100vw - 200px)) - 2rem);
+$footer_max_width: $header_max_width;
 
 $accent_blue: #072988;
 $on_accent_blue: #ffffff;
+$accent_yellow: #fee405;
+$accent_red: #cc0000;
+$on_accent_red: #ffffff;

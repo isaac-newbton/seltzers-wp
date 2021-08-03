@@ -1,0 +1,35 @@
+.error404 {
+
+    main {
+        text-align: center;
+    }
+
+    .post_title {
+
+        .heading_p1 {
+            font-size: 200%;
+        }
+
+        .heading_p2 {
+            font-size: 100%;
+        }
+    }
+
+    .return_home {
+        margin-top: 4rem;
+        font-size: 90%;
+        font-weight: 600;
+    }
+
+    .background_container {
+        min-height: 50vh;
+        display: flex;
+        place-items: center;
+    }
+
+    .searchform {
+        max-width: 40ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
