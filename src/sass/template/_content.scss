@@ -16,11 +16,30 @@
     color: #ffffff;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    background-size: cover;
+    position: relative;
 
     &.no_pad {
         padding-top: unset;
         padding-bottom: unset;
     }
+
+    > *:not(.background_overlay) {
+        z-index: 1;
+    }
+}
+
+.background_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    opacity: 0.5;
+    z-index: 0;
 }
 
 .content_container {
@@ -68,5 +87,19 @@ a.button {
 
     &:focus {
         outline: 2px dotted $on_accent_red;
+    }
+}
+
+.breaker {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    > img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 30ch;
+        padding: 0 2rem;
     }
 }

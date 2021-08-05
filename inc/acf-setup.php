@@ -11,6 +11,182 @@ add_filter('acf_settings_url', 'aca_acf_settings_url');
 
 if(function_exists('acf_add_local_field_group')){
 	acf_add_local_field_group([
+		'key'=>'group_home_fields',
+		'title'=>'Homepage Custom Fields',
+		'location'=>[
+			[
+				[
+					'param'=>'page_type',
+					'operator'=>'==',
+					'value'=>'front_page'
+				]
+			]
+		],
+		'fields'=>[
+			[
+				'key'=>'field_hero_text',
+				'label'=>'Hero Text',
+				'name'=>'hero_text',
+				'type'=>'text'
+			],
+			[
+				'key'=>'field_hero_video',
+				'label'=>'Hero Video URL',
+				'name'=>'hero_video',
+				'type'=>'url'
+			],
+			[
+				'key'=>'field_hero_poster',
+				'label'=>'Hero Poster',
+				'name'=>'hero_poster',
+				'type'=>'image',
+				'return_format'=>'url',
+				'library'=>'all'
+			],
+		],
+		'menu_order'=>0,
+		'position'=>'acf_after_title',
+		'style'=>'default',
+		'label_placement'=>'top',
+		'instruction_placement'=>'label',
+		'hide_on_screen'=>''
+	]);
+
+	acf_add_local_field_group([
+		'key'=>'group_home_product_fields',
+		'title'=>'Homepage Product Fields',
+		'location'=>[
+			[
+				[
+					'param'=>'page_type',
+					'operator'=>'==',
+					'value'=>'front_page'
+				]
+			]
+		],
+		'fields'=>[
+			[
+				'key'=>'field_original_description',
+				'label'=>'Original Description',
+				'name'=>'original_description',
+				'type'=>'textarea'
+			],
+			[
+				'key'=>'field_original_url',
+				'label'=>'Original URL',
+				'name'=>'original_url',
+				'type'=>'url'
+			],
+			[
+				'key'=>'field_original_product_image',
+				'label'=>'Original Product Image',
+				'name'=>'original_product_image',
+				'type'=>'image',
+				'return_format'=>'url',
+				'library'=>'all'
+			],
+			[
+				'key'=>'field_original_ingredient_image',
+				'label'=>'Original Ingredient Image',
+				'name'=>'original_ingredient_image',
+				'type'=>'image',
+				'return_format'=>'url',
+				'library'=>'all'
+			],
+			[
+				'key'=>'field_sweet_description',
+				'label'=>'Sweet Description',
+				'name'=>'sweet_description',
+				'type'=>'textarea'
+			],
+			[
+				'key'=>'field_sweet_url',
+				'label'=>'Sweet URL',
+				'name'=>'sweet_url',
+				'type'=>'url'
+			],
+			[
+				'key'=>'field_sweet_product_image',
+				'label'=>'Sweet Product Image',
+				'name'=>'sweet_product_image',
+				'type'=>'image',
+				'return_format'=>'url',
+				'library'=>'all'
+			],
+			[
+				'key'=>'field_sweet_ingredient_image',
+				'label'=>'Sweet Ingredient Image',
+				'name'=>'sweet_ingredient_image',
+				'type'=>'image',
+				'return_format'=>'url',
+				'library'=>'all'
+			],
+			[
+				'key'=>'field_db_smoked_description',
+				'label'=>'Smoked Description',
+				'name'=>'db_smoked_description',
+				'type'=>'textarea'
+			],
+			[
+				'key'=>'field_db_smoked_url',
+				'label'=>'Smoked URL',
+				'name'=>'db_smoked_url',
+				'type'=>'url'
+			],
+			[
+				'key'=>'field_db_smoked_product_image',
+				'label'=>'Smoked Product Image',
+				'name'=>'db_smoked_product_image',
+				'type'=>'image',
+				'return_format'=>'url',
+				'library'=>'all'
+			],
+			[
+				'key'=>'field_db_smoked_ingredient_image',
+				'label'=>'Smoked Ingredient Image',
+				'name'=>'db_smoked_ingredient_image',
+				'type'=>'image',
+				'return_format'=>'url',
+				'library'=>'all'
+			],
+			[
+				'key'=>'field_chipotle_description',
+				'label'=>'Chipotle Description',
+				'name'=>'chipotle_description',
+				'type'=>'textarea'
+			],
+			[
+				'key'=>'field_chipotle_url',
+				'label'=>'Chipotle URL',
+				'name'=>'chipotle_url',
+				'type'=>'url'
+			],
+			[
+				'key'=>'field_chipotle_product_image',
+				'label'=>'Chipotle Product Image',
+				'name'=>'chipotle_product_image',
+				'type'=>'image',
+				'return_format'=>'url',
+				'library'=>'all'
+			],
+			[
+				'key'=>'field_chipotle_ingredient_image',
+				'label'=>'Chipotle Ingredient Image',
+				'name'=>'chipotle_ingredient_image',
+				'type'=>'image',
+				'return_format'=>'url',
+				'library'=>'all'
+			],
+		],
+		'menu_order'=>0,
+		'position'=>'acf_after_title',
+		'style'=>'default',
+		'label_placement'=>'top',
+		'instruction_placement'=>'label',
+		'hide_on_screen'=>''
+	]);
+
+	acf_add_local_field_group([
 		'key'=>'group_product_fields',
 		'title'=>'Product Custom Fields',
 		'fields'=>[
