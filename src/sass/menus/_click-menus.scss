@@ -30,6 +30,11 @@
         position: relative;
         top: unset;
         left: unset;
+        
+        @media(min-width: $nav_breakpoint) {
+            position: absolute;
+            top: 100%;
+        }
     }
 
     button > svg {

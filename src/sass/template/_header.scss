@@ -1,7 +1,68 @@
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-wrapper {
+    position: relative;
+    padding: 10px 0;
+    background: #ffffff;
+    
+    @media(min-width: $nav_breakpoint) {
+        max-width: $background_max_width;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .header-content-container {
+            flex: 0 0 200px;
+
+            @media(min-width: 1200px) {
+                flex-basis: 294px;
+            }
+        }
+    }
+}
+
+#header_menu_toggle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 3px;
+    background: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    padding: 20px;
+
+    &:focus{
+        outline: 3px dotted #000000;
+    }
+
+    &:hover, &:focus {
+        background-color: #efefef;
+        transition: background 300ms;
+    }
+
+    @media(min-width: $nav_breakpoint) {
+        display: none;
+        width: 1px;
+        height: 1px;
+        visibility: hidden;
+        top: 0;
+        left: 0;
+    }
+}
+
 .header-search-container {
 
     @media(min-width: $nav_breakpoint) {
         position: relative;
+        flex-basis: 15ch !important;
+        display: flex;
 
         ::before {
             position: absolute;
@@ -20,6 +81,10 @@
         display: flex;
         flex-flow: row-reverse nowrap;
 
+        @media(min-width: $nav_breakpoint) {
+            flex-basis: 15ch !important;
+        }
+
         input[type="text"] {
             border: 1px solid #ffffff;
             padding-left: 0.25ch;
@@ -27,6 +92,11 @@
             &::placeholder {
                 color: transparentize($color: $accent_blue, $amount: 0.3);
                 font-style: italic;
+            }
+
+            @media(min-width: $nav_breakpoint){
+                flex-basis: 8.5ch;
+                font-size: min(calc(0.8rem + 0.5vw), 1.6rem);
             }
         }
 
@@ -40,5 +110,23 @@
                 margin-left: 5px;
             }
         }
+    }
+}
+
+.header-logo-container {
+    max-width: min(294px, calc(100% - 86px));
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    @media(min-width: $nav_breakpoint) {
+        max-width: 200px;
+    }
+
+    @media(min-width: 1200px) {
+        max-width: 294px;
     }
 }

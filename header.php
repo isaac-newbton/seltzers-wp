@@ -21,12 +21,19 @@
                 </svg>
                 <header id="site-header" class="site-header">
                     <div class="header-wrapper">
+                        <button id="header_menu_toggle">
+                            <svg viewBox="0 0 100 80" width="40" height="40">
+                                <rect width="100" height="20"></rect>
+                                <rect y="30" width="100" height="20"></rect>
+                                <rect y="60" width="100" height="20"></rect>
+                            </svg>
+                        </button>
                         <div class="header-content-container">
                             <div class="header-logo-container">
                                 <?php the_custom_logo(); ?>
                             </div>
                         </div>
-                        <div class="header-menu-wrapper">
+                        <div class="header-menu-wrapper" id="header_menu">
                             <?php
                             wp_nav_menu([
                                 'theme_location'  => 'primary',
