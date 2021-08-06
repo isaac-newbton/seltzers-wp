@@ -226,6 +226,10 @@
                 order: 3;
             }
         }
+
+        .product_ingredient_container > img {
+            margin-left: auto;
+        }
     }
 
     &.db_smoked {
@@ -265,6 +269,10 @@
             .product_ingredient_container {
                 order: 3;
             }
+        }
+
+        .product_ingredient_container > img {
+            margin-left: auto;
         }
     }
 
