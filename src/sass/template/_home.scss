@@ -151,8 +151,10 @@
         width: min(calc(15ch + 0.5vw), 20ch);
         max-width: 100%;
         margin: 2rem auto;
+        display: block;
 
         @media(min-width: $nav_breakpoint) {
+            display: inline-block;
             margin: 2rem 0;
         }
     }
@@ -363,8 +365,14 @@
         margin-left: auto;
         margin-right: auto;
         position: relative;
-        top: 50%;
-        transform: translateY(-50%);
+    }
+
+    @media(min-width: $nav_breakpoint) {
+
+        img {
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
 }
 
@@ -374,11 +382,14 @@
 
     img {
         position: relative;
-        top: 50%;
-        transform: translateY(-50%);
     }
 
     @media(min-width: $nav_breakpoint) {
         margin: 0;
+
+        img {
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
 }
