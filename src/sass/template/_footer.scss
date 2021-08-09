@@ -32,6 +32,23 @@
             }
         }
     }
+
+    @media(min-width: $nav_breakpoint){
+        &.scrolled, &.not-scrolled {
+            position: fixed;
+            z-index: 1;
+            bottom: 0;
+            transition: transform 200ms;
+        }
+
+        &.scrolled {
+            transform: translateY(0%);
+        }
+
+        &.not-scrolled {
+            transform: translateY(100%);
+    }
+    }
 }
 
 #footer-menu-container {
