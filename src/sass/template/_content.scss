@@ -7,6 +7,10 @@
     a {
         color: lighten($accent_blue, 50%);
     }
+
+    @media(min-width: $nav_breakpoint) {
+        margin-bottom: clamp(0px, calc(100vw - 120rem - 17px), 100px);
+    }
 }
 
 .background_container {
