@@ -24,6 +24,9 @@
                     siteFooter.classList.remove('scrolled');
                     siteFooter.classList.add('not-scrolled');
                 }
+                setTimeout(() => {
+                    siteFooter.style.transition = 'transform 200ms';
+                }, 100);
             }
         }
     });
