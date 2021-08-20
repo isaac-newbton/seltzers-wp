@@ -10,7 +10,8 @@ register_post_type('product', [
 	'supports'=>[
 		'thumbnail',
 		'title'
-	]
+	],
+	'has_archive'=>'products'
 ]);
 
 register_taxonomy('product_category', 'product', [
@@ -30,6 +31,9 @@ register_taxonomy('product_category', 'product', [
 		'choose_from_most_used'=>'Choose from the most used product categories',
 		'not_found'=>'No product categories found',
 		'no_terms'=>'No product categories'
+	],
+	'rewrite'=>[
+		'slug'=>'product-category'
 	]
 ]);
 

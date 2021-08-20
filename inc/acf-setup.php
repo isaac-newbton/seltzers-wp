@@ -197,6 +197,12 @@ if(function_exists('acf_add_local_field_group')){
 				'type'=>'text'
 			],
 			[
+				'key'=>'field_product_weight_subtitle',
+				'label'=>'Weight Subtitle',
+				'name'=>'weight_subtitle',
+				'type'=>'text'
+			],
+			[
 				'key'=>'field_product_shop_url',
 				'label'=>'Shop URL',
 				'name'=>'shop_url',
@@ -267,6 +273,63 @@ if(function_exists('acf_add_local_field_group')){
 					'param'=>'post_type',
 					'operator'=>'==',
 					'value'=>'recipe'
+				]
+			]
+		],
+		'menu_order'=>0,
+		'position'=>'acf_after_title',
+		'style'=>'default',
+		'label_placement'=>'top',
+		'instruction_placement'=>'label',
+		'hide_on_screen'=>''
+	]);
+
+	acf_add_local_field_group([
+		'key'=>'group_about_us_fields',
+		'title'=>'About Us Custom Fields',
+		'fields'=>[
+			[
+				'key'=>'field_content_sections',
+				'label'=>'Content Sections',
+				'name'=>'content_sections',
+				'type'=>'repeater',
+				'layout'=>'row',
+				'sub_fields'=>[
+					[
+						'key'=>'field_image',
+						'label'=>'Image',
+						'name'=>'image',
+						'type'=>'image',
+						'return_format'=>'url',
+						'library'=>'all',
+						'preview_size'=>'thumbnail',
+						'required'=>true
+					],
+					[
+						'key'=>'field_title',
+						'label'=>'Title',
+						'name'=>'title',
+						'type'=>'text',
+						'required'=>true
+					],
+					[
+						'key'=>'field_content',
+						'label'=>'Content',
+						'name'=>'content',
+						'type'=>'wysiwyg',
+						'tabs'=>'all',
+						'media_upload'=>false,
+						'required'=>true
+					],
+				]
+			],
+		],
+		'location'=>[
+			[
+				[
+					'param'=>'page_template',
+					'operator'=>'==',
+					'value'=>'about-us.php'
 				]
 			]
 		],

@@ -1,0 +1,98 @@
+.background_container.about_background {
+    background-position: top;
+    background-size: cover;
+    background-image: url(../images/wood-bg.jpg);
+    background-attachment: fixed;
+}
+
+.about_section {
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 0;
+    min-height: 85vh;
+    justify-content: center;
+    overflow-x: hidden;
+
+    > header {
+        position: relative;
+        background: white;
+        margin-inline-end: 2rem;
+        margin-inline-start: min(100px, 12.5vw);
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+
+        .title_container {
+
+        }
+
+        > img {
+            display: block;
+            width: min(300px, 50vw);
+            position: absolute;
+            left: max(-150px, -25vw);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        h1, h2 {
+            font-size: min(6rem, 1.5rem + 2vw);
+            line-height: 1;
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: 900;
+            color: black;
+            padding: 1.25ch 2rem 1.25ch calc(2rem + min(150px, 25vw));
+        }
+    }
+
+    > .body {
+        width: 100%;
+        max-width: 70ch;
+        padding: 0 3rem;
+        margin-top: calc(5rem + min(100px, 10vw));
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    .scroll_next {
+        color: white;
+        font-size: 3rem;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        max-width: 5ch;
+        text-align: center;
+        border-radius: 0.5rem;
+        margin: 2rem auto;
+        line-height: 0;
+
+        &:hover, &:focus {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        &:focus {
+            outline: 2px dotted white;
+        }
+    }
+
+    @media(min-width: $nav_breakpoint) {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        > header {
+            flex: 1 0 55%;
+        }
+
+        > .body {
+            flex: 0 1 45%;
+            margin-top: 7rem;
+        }
+
+        &:last-child > .body {
+            margin-top: unset;
+        }
+    }
+}
