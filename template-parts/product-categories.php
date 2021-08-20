@@ -8,7 +8,7 @@ global $category;
 
 ?>
 
-<div class="content_container product_categories_nav_container">
+<div id="product_categories" class="content_container product_categories_nav_container">
     <nav class="product_categories">
         <ul>
             <?php foreach($categories as $c): ?>

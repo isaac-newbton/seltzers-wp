@@ -13,6 +13,17 @@
     }
 }
 
+.tax-product_category, .single-product {
+
+    .site-main {
+        background: #000000;
+
+        @media(min-width: $nav_breakpoint) {
+            margin-bottom: 0;
+        }
+    }
+}
+
 .background_container {
     width: 100%;
     max-width: $background_max_width;
