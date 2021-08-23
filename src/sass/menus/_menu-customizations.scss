@@ -31,6 +31,13 @@
             color: #03c;
         }
     }
+
+    &.current-menu-item {
+        
+        > a, > button {
+            color: #03c;
+        }
+    }
 }
 
 .sub-menu {
