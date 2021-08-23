@@ -41,11 +41,11 @@
         left: 50%;
         transform: translateX(-50%);
     
-        &:hover, &:focus {
+        &:hover, &:focus-visible {
             background-color: rgba(255, 255, 255, 0.25);
         }
     
-        &:focus {
+        &:focus-visible {
             outline: 2px dotted white;
         }
     }
@@ -99,11 +99,11 @@ nav.product_categories {
             box-sizing: border-box;
             text-align: center;
 
-            &:focus {
+            &:focus-visible {
                 outline: 2px dotted $on_accent_blue;
             }
 
-            &:focus, &:hover {
+            &:focus-visible, &:hover {
                 background-color: darken($on_accent_blue, 5%);
             }
         }
@@ -146,9 +146,10 @@ article.product {
         font-size: 1.6rem;
         text-transform: uppercase;
         line-height: 1;
-        margin: 1rem 0 0;
+        margin: 1rem auto 0;
         text-align: center;
         font-weight: bold;
+        max-width: 30rem;
     }
 
     .weight_subtitle {
@@ -202,11 +203,11 @@ a.product_shop_button {
     box-sizing: border-box;
     text-decoration: none;
 
-    &:focus, &:hover {
+    &:focus-visible, &:hover {
         background-color: darken($accent_red, 2.5%);
     }
 
-    &:focus {
+    &:focus-visible {
         outline: 2px dotted $on_accent_red;
     }
 
@@ -259,12 +260,12 @@ a.product_shop_button {
         font-weight: 400;
     }
     
-    &:hover, &:focus {
+    &:hover, &:focus-visible {
         background-color: rgba(255, 255, 255, 0.25);
         text-decoration: none;
     }
 
-    &:focus {
+    &:focus-visible {
         outline: 1px dotted $on_accent_red;
     }
 }
@@ -334,11 +335,11 @@ a.product_shop_button {
                 color: white;
                 text-decoration: none;
 
-                &:hover, &:focus {
+                &:hover, &:focus-visible {
                     background-color: rgba(255, 255, 255, 0.1);
                 }
 
-                &:focus {
+                &:focus-visible {
                     outline: 2px dotted white;
                 }
             }
@@ -376,13 +377,7 @@ a.product_shop_button {
     padding: 2rem;
     width: 100%;
     max-width: calc(660px + 4rem);
-    margin-block-start: 6rem;
-    margin-block-end: 6rem;
-
-    @media(min-width: $nav_breakpoint){
-        margin-inline-start: 2rem;
-        margin-inline-end: auto;
-    }
+    margin: 6rem auto;
 
     > header {
         text-transform: uppercase;
@@ -409,6 +404,7 @@ a.product_shop_button {
             padding: 0;
             display: flex;
             flex-flow: row wrap;
+            justify-content: center;
 
             > li {
                 display: block;

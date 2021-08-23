@@ -27,9 +27,9 @@
 
         > img {
             display: block;
-            width: min(300px, 50vw);
+            width: min(250px, 50vw);
             position: absolute;
-            left: max(-150px, -25vw);
+            left: max(-125px, -25vw);
             top: 50%;
             transform: translateY(-50%);
         }
@@ -41,7 +41,7 @@
             text-transform: uppercase;
             font-weight: 900;
             color: black;
-            padding: 1.25ch 2rem 1.25ch calc(2rem + min(150px, 25vw));
+            padding: 1.25ch 2rem 1.25ch calc(2rem + min(125px, 25vw));
         }
     }
 
@@ -49,7 +49,7 @@
         width: 100%;
         max-width: 70ch;
         padding: 0 3rem;
-        margin-top: calc(5rem + min(100px, 10vw));
+        margin-top: calc(3rem + min(100px, 10vw));
         margin-left: auto;
         margin-right: auto;
         font-size: 1.5rem;
@@ -68,11 +68,11 @@
         margin: 2rem auto;
         line-height: 0;
 
-        &:hover, &:focus {
+        &:hover, &:focus-visible {
             background-color: rgba(255, 255, 255, 0.25);
         }
 
-        &:focus {
+        &:focus-visible {
             outline: 2px dotted white;
         }
     }
@@ -83,12 +83,14 @@
         align-items: center;
 
         > header {
-            flex: 1 0 55%;
+            flex: 0 0 50%;
         }
 
         > .body {
-            flex: 0 1 45%;
+            flex: 0 1 50%;
             margin-top: 7rem;
+            max-width: 40ch;
+            margin-left: 0;
         }
 
         &:last-child > .body {

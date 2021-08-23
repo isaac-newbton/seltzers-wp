@@ -26,7 +26,7 @@
                 text-decoration: none;
                 display: inline-block;
 
-                &:focus {
+                &:focus-visible {
                     outline-color: $on_accent_blue;
                 }
             }

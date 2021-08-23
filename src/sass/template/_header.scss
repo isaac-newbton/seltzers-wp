@@ -39,11 +39,11 @@
     cursor: pointer;
     padding: 20px;
 
-    &:focus{
+    &:focus-visible {
         outline: 3px dotted #000000;
     }
 
-    &:hover, &:focus {
+    &:hover, &:focus-visible {
         background-color: #efefef;
         transition: background 300ms;
     }

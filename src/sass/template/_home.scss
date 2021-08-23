@@ -167,12 +167,12 @@
             color: #ffffff;
             border-color: #d0333a;
 
-            &:focus, &:hover {
+            &:focus-visible, &:hover {
                 color: #ffffff;
                 background: linear-gradient(#d0333a, darken(#d0333a, 10%));
             }
 
-            &:focus {
+            &:focus-visible {
                 outline-color: #ffffff;
             }
         }
@@ -201,12 +201,12 @@
             color: #ffffff;
             border-color: #3366cc;
 
-            &:focus, &:hover {
+            &:focus-visible, &:hover {
                 color: #ffffff;
                 background: linear-gradient(#3366cc, darken(#3366cc, 10%));
             }
 
-            &:focus {
+            &:focus-visible {
                 outline-color: #ffffff;
             }
         }
@@ -240,12 +240,12 @@
             color: #000000;
             border-color: #f1dd0b;
 
-            &:focus, &:hover {
+            &:focus-visible, &:hover {
                 color: #000000;
                 background: linear-gradient(#f1dd0b, darken(#f1dd0b, 10%));
             }
 
-            &:focus {
+            &:focus-visible {
                 outline-color: #ffffff;
             }
         }
@@ -284,12 +284,12 @@
             color: #ffffff;
             border-color: #75bc43;
 
-            &:focus, &:hover {
+            &:focus-visible, &:hover {
                 color: #ffffff;
                 background: linear-gradient(#75bc43, darken(#75bc43, 10%));
             }
 
-            &:focus {
+            &:focus-visible {
                 outline-color: #ffffff;
             }
         }

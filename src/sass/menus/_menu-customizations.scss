@@ -23,7 +23,7 @@
         letter-spacing: unset;
         font-weight: 900;
 
-        &:focus {
+        &:focus-visible {
             outline: 3px dotted black;
         }
 
@@ -44,11 +44,11 @@
         padding-left: 2ch;
         color: #ffffff;
 
-        &:focus {
+        &:focus-visible {
             outline-color: white;
         }
 
-        &:focus, &:hover {
+        &:focus-visible, &:hover {
             color: #66c;
         }
 

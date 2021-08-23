@@ -93,7 +93,7 @@ a.button {
 	padding: 0.25ch 0.5ch;
 	text-decoration: none;
 
-    &:focus, &:hover {
+    &:focus-visible, &:hover {
         color: darken($accent_red, 5%);
         background: linear-gradient($on_accent_red, darken($on_accent_red, 10%));
         transition: color 100ms;
@@ -101,7 +101,7 @@ a.button {
         border-top-width: 2px;
     }
 
-    &:focus {
+    &:focus-visible {
         outline: 2px dotted $on_accent_red;
     }
 }
