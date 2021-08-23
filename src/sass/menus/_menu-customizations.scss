@@ -32,7 +32,7 @@
         }
     }
 
-    &.current-menu-item {
+    &.current-menu-item, &.current-menu-ancestor {
         
         > a, > button {
             color: #03c;
