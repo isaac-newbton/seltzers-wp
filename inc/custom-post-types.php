@@ -48,5 +48,6 @@ register_post_type('recipe', [
 	'supports'=>[
 		'thumbnail',
 		'title'
-	]
+	],
+	'has_archive'=>'recipes'
 ]);

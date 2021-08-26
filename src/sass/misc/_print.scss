@@ -1,0 +1,22 @@
+@media print {
+    #site-header, #site-footer, .recipe_image_wrapper > .actions {
+        display: none !important;
+    }
+
+    .recipe {
+        font-size: 1.6rem !important;
+    }
+
+    .recipe, .recipe * {
+        color: black !important;
+        background: white !important;
+        margin-inline: 0 !important;
+        padding-inline: 0 !important;
+    }
+
+    .recipe img {
+        display: inline-block !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
