@@ -49,5 +49,5 @@ register_post_type('recipe', [
 		'thumbnail',
 		'title'
 	],
-	'has_archive'=>'recipes'
+	'has_archive'=>'recipe'
 ]);

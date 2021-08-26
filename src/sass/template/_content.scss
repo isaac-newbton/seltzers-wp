@@ -119,3 +119,15 @@ a.button {
         padding: 0 2rem;
     }
 }
+
+.page-header, .page-header > h1 {
+    font-size: 200%;
+    display: block;
+    width: 100%;
+    max-width: $content_max_width;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+    text-align: center;
+}

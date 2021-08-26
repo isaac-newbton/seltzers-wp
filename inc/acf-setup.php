@@ -340,4 +340,49 @@ if(function_exists('acf_add_local_field_group')){
 		'instruction_placement'=>'label',
 		'hide_on_screen'=>''
 	]);
+
+	acf_add_local_field_group([
+		'key'=>'group_faqs_fields',
+		'title'=>'FAQs Fields',
+		'fields'=>[
+			[
+				'key'=>'field_faqs',
+				'label'=>'FAQs',
+				'name'=>'faqs',
+				'type'=>'repeater',
+				'layout'=>'row',
+				'sub_fields'=>[
+					[
+						'key'=>'field_question',
+						'label'=>'Question',
+						'name'=>'question',
+						'type'=>'text',
+						'required'=>true
+					],
+					[
+						'key'=>'field_answer',
+						'label'=>'Answer',
+						'name'=>'answer',
+						'type'=>'wysiwyg',
+						'required'=>true
+					]
+				]
+			]
+		],
+		'location'=>[
+			[
+				[
+					'param'=>'page_template',
+					'operator'=>'==',
+					'value'=>'faqs.php'
+				]
+			]
+		],
+		'menu_order'=>0,
+		'position'=>'acf_after_title',
+		'style'=>'default',
+		'label_placement'=>'top',
+		'instruction_placement'=>'label',
+		'hide_on_screen'=>''
+	]);
 }
