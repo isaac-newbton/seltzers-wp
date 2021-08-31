@@ -115,7 +115,10 @@ ul.recipes {
             text-decoration: none;
 
             &:hover, &:focus-visible {
-                background-color: rgba(255, 255, 255, 0.1);
+                
+                img {
+                    filter: brightness(133%) saturate(75%);
+                }
             }
 
             &:focus-visible {
@@ -134,11 +137,13 @@ ul.recipes {
         }
 
         img {
+            position: relative;
             display: block;
             max-width: 100%;
             height: auto;
             margin: 0 auto 0.5rem;
             border: 4px solid $on_accent_blue;
+            transition: filter 300ms;
         }
 
         h2 {
