@@ -385,4 +385,50 @@ if(function_exists('acf_add_local_field_group')){
 		'instruction_placement'=>'label',
 		'hide_on_screen'=>''
 	]);
+
+	acf_add_local_field_group([
+		'key'=>'group_where_to_buy',
+		'title'=>'Where To Buy',
+		'fields'=>[
+			[
+				'key'=>'field_locations',
+				'label'=>'Locations',
+				'name'=>'locations',
+				'type'=>'repeater',
+				'layout'=>'row',
+				'sub_fields'=>[
+					[
+						'key'=>'field_name',
+						'label'=>'Name',
+						'name'=>'name',
+						'type'=>'text',
+						'required'=>true
+					],
+					[
+						'key'=>'field_zipcode',
+						'label'=>'Zip Code',
+						'name'=>'zipcode',
+						'type'=>'text',
+						'required'=>true
+					],
+					[
+						'key'=>'field_address',
+						'label'=>'Address',
+						'name'=>'address',
+						'type'=>'textarea',
+						'required'=>true
+					]
+				]
+			],
+		],
+		'location'=>[
+			[
+				[
+					'param'=>'page_template',
+					'operator'=>'==',
+					'value'=>'where-to-buy.php'
+				]
+			]
+		]
+	]);
 }

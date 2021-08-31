@@ -1,0 +1,23 @@
+.where_to_buy_header {
+    height: min(50vh, 530px);
+    background-size: cover;
+    background-image: url(../images/where-to-buy-banner.jpg);
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: unset;
+    margin: unset;
+
+    > h1 {
+        color: $on_accent_red;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+        font-size: calc(2.5rem + 3vw);
+    }
+}
+
+.location:last-child {
+    margin-bottom: min(6rem, 12.5vh);
+}

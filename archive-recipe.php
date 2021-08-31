@@ -8,6 +8,9 @@ get_header();
 ?>
 
 <div class="background_container recipe_background">
+    <header class="page-header">
+        <h1>Recipes</h1>
+    </header>
     <div class="content_container">
         <?php if(have_posts()): ?>
             <ul class="recipes">
