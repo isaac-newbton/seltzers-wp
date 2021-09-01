@@ -323,6 +323,24 @@ if(function_exists('acf_add_local_field_group')){
 					],
 				]
 			],
+			[
+				'key'=>'field_featured_video_id',
+				'label'=>'Featured Video YouTube ID',
+				'name'=>'featured_video_id',
+				'type'=>'text'
+			],
+			[
+				'key'=>'field_featured_video_title',
+				'label'=>'Featured Video Title',
+				'name'=>'featured_video_title',
+				'type'=>'text'
+			],
+			[
+				'key'=>'field_featured_video_description',
+				'label'=>'Featured Video Description',
+				'name'=>'featured_video_description',
+				'type'=>'wysiwyg'
+			]
 		],
 		'location'=>[
 			[

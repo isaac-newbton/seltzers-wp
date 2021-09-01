@@ -8,6 +8,7 @@
     justify-content: flex-end;
     max-width: unset;
     margin: unset;
+    min-height: 33vw;
 
     > h1 {
         color: $on_accent_red;
@@ -18,6 +19,7 @@
     }
 }
 
-.location:last-child {
-    margin-bottom: min(6rem, 12.5vh);
+.metalocator.content_container {
+    padding-top: 8rem;
+    padding-bottom: calc(8rem + 3vw);
 }

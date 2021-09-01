@@ -98,3 +98,25 @@
         }
     }
 }
+
+.about_video_section {
+    padding: 8rem 0 calc(8rem + 3vw);
+
+    > header {
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    > .body {
+        text-align: center;
+    }
+
+    .ytplayer {
+        width: 960px;
+        height: min(540px, calc(56.25vw - 2.25rem));
+        max-width: 100%;
+        margin: 2rem auto 0;
+    }
+}
