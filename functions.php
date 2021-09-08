@@ -60,6 +60,7 @@ function aca_theme_styles_and_scripts() {
     wp_enqueue_script( 'aca-theme-motion-text', get_template_directory_uri() . '/assets/js/motion-text.js', [], $theme_version );
     wp_enqueue_script( 'aca-theme-nav-toggle', get_template_directory_uri() . '/assets/js/main-nav.js', [], $theme_version );
     wp_enqueue_script( 'aca-opener', get_template_directory_uri() . '/assets/js/opener.js', [], $theme_version );
+    wp_enqueue_script( 'aca-video', get_template_directory_uri() . '/assets/js/video.js', [], $theme_version );
     // wp_enqueue_script( 'aca-footer-scroll', get_template_directory_uri() . '/assets/js/footer.js', [], $theme_version );
     wp_register_script('fontawesome-script', get_stylesheet_directory_uri() . '/inc/fontawesome/js/all.min.js', [], ACA_FONTAWESOME_VERSION);
     wp_enqueue_script('fontawesome-script');

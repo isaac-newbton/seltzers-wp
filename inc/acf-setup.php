@@ -30,6 +30,12 @@ if(function_exists('acf_add_local_field_group')){
 				'type'=>'text'
 			],
 			[
+				'key'=>'field_hero_button_url',
+				'label'=>'Hero Button Link',
+				'name'=>'button_url',
+				'type'=>'url'
+			],
+			[
 				'key'=>'field_hero_video',
 				'label'=>'Hero Video URL',
 				'name'=>'hero_video',

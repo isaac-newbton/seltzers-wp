@@ -6,6 +6,7 @@ get_header();
  */
 
 $hero_text = get_field('hero_text');
+$hero_url = get_field('button_url');
 $hero_bg_video = get_field('hero_video');
 $hero_bg_poster = get_field('hero_poster');
 $breaker = get_field('breaker');
@@ -25,7 +26,7 @@ $breaker = get_field('breaker');
 				</div>
 			<?php endif; ?>
 			<div class="button_link_container">
-				<a href="#" class="button">Learn More</a>
+				<a href="<?=$hero_url ?: '#'?>" class="button">Learn More</a>
 			</div>
 		</div>
 		<?php if($hero_bg_video): ?>

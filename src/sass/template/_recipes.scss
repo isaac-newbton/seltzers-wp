@@ -52,6 +52,34 @@ article.recipe {
             padding: 0.75em 1.5em;
         }
     }
+
+    .video_wrapper {
+        max-width: 100%;
+        position: relative;
+
+        > video {
+            width: 100%;
+            height: auto;
+        }
+
+        .play_video_button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            width: 100%;
+            background: transparent;
+
+            &.playing {
+
+                > svg {
+                    display: none;
+                }
+            }
+        }
+    }
 }
 
 #print {
