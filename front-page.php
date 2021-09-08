@@ -30,7 +30,7 @@ $breaker = get_field('breaker');
 			</div>
 		</div>
 		<?php if($hero_bg_video): ?>
-			<video src="<?=$hero_bg_video?>" autoplay muted<?php if($hero_bg_poster): ?> poster="<?=$hero_bg_poster?>"<?php endif; ?>></video>
+			<video src="<?=$hero_bg_video?>" autoplay loop muted<?php if($hero_bg_poster): ?> poster="<?=$hero_bg_poster?>"<?php endif; ?>></video>
 		<?php endif; ?>
 	</div>
 </section>
