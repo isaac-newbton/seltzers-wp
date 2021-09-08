@@ -63,6 +63,9 @@ if(0 < $category->count) {
                         <img src="<?=get_template_directory_uri() . '/assets/images/brand-1.png'?>" alt="Bombergers.">
                     </li>
                     <li>
+                        <img src="<?=get_template_directory_uri() . '/assets/images/brand-2.png'?>" alt="Seltzer's Smokehouse Meats.">
+                    </li>
+                    <li>
                         <img src="<?=get_template_directory_uri() . '/assets/images/brand-3.png'?>" alt="Baum's.">
                     </li>
                 </ul>

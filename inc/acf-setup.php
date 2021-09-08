@@ -265,6 +265,12 @@ if(function_exists('acf_add_local_field_group')){
 				'label'=>'Directions',
 				'name'=>'directions',
 				'type'=>'wysiwyg'
+			],
+			[
+				'key'=>'field_recipe_video_url',
+				'label'=>'Video URL',
+				'name'=>'video_url',
+				'type'=>'url'
 			]
 		],
 		'location'=>[

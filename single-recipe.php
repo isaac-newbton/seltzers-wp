@@ -7,6 +7,7 @@ get_header();
 
 $directions = get_field('directions');
 $ingredients = get_field('ingredients');
+$video_url = get_field('video_url');
 
 ?>
 
@@ -14,7 +15,13 @@ $ingredients = get_field('ingredients');
     <div class="content_container">
         <article id="recipe-<?php the_ID(); ?>" class="recipe">
             <div class="recipe_image_wrapper">
-                <?php the_post_thumbnail('large'); ?>
+                <?php if($video_url): ?>
+                    <div class="video_wrapper">
+                        <video src="<?=$video_url?>" poster="<?=get_the_post_thumbnail_url(null, 'large')?>" controls></video>
+                    </div>
+                <?php else: ?>
+                    <?php the_post_thumbnail('large'); ?>
+                <?php endif; ?>
                 <div class="actions">
                     <a href="<?=get_post_type_archive_link('recipe')?>">Back to Recipes</a>
                     <button type="button" id="print" onclick="window.print(); return false;">
