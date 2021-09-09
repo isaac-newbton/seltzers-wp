@@ -15,6 +15,9 @@ $breaker = get_field('breaker');
 
 <section id="homepage_hero">
 	<div class="background_container" style="<?php if($hero_bg_poster): ?>background-image: url(<?=$hero_bg_poster?>)<?php endif; ?>">
+		<?php if($hero_bg_video): ?>
+			<video src="<?=$hero_bg_video?>" autoplay loop muted<?php if($hero_bg_poster): ?> poster="<?=$hero_bg_poster?>"<?php endif; ?>></video>
+		<?php endif; ?>
 		<div class="content_container">
 			<h1 class="post_title">
 				<span class="heading_p1">Seltzer's</span><br>
@@ -29,9 +32,6 @@ $breaker = get_field('breaker');
 				<a href="<?=$hero_url ?: '#'?>" class="button">Learn More</a>
 			</div>
 		</div>
-		<?php if($hero_bg_video): ?>
-			<video src="<?=$hero_bg_video?>" autoplay loop muted<?php if($hero_bg_poster): ?> poster="<?=$hero_bg_poster?>"<?php endif; ?>></video>
-		<?php endif; ?>
 	</div>
 </section>
 

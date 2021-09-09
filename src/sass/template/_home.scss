@@ -1,26 +1,53 @@
 #homepage_hero {
 
     .background_container {
-        min-height: calc(85vh - 5rem);
-        display: flex;
-        flex-direction: column;
-        place-content: center;
-        position: relative;
+        padding-top: 0;
+        padding-bottom: 0;
+        background: black !important;
 
         > .content_container {
-            z-index: 2;
+            background: black;
+            padding-top: 3rem;
+            padding-bottom: 6rem;
         }
 
         > video {
-            z-index: 1;
-            position: absolute;
             width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
+            height: auto;
+            min-height: 320px;
             object-fit: cover;
+            object-position: right;
+        }
+
+        @media(min-width: $nav_breakpoint) {
+            min-height: calc(85vh - 5rem);
+            display: flex;
+            flex-direction: column;
+            place-content: center;
+            position: relative;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            background-color: unset;
+
+            > .content_container {
+                z-index: 2;
+                background: transparent;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
+            > video {
+                z-index: 1;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                object-fit: cover;
+                object-position: center;
+            }
         }
     }
 
@@ -60,17 +87,26 @@
 
     .background_container {
         min-height: calc(60vh - 5rem);
-        background-position: right;
+        background-position: 65% bottom;
         display: flex;
         flex-direction: column;
-        place-content: center;
+        place-content: center flex-start;
+        padding-top: 4rem;
+        background-size: cover;
+        background-repeat: no-repeat;
 
         .background_overlay {
-            opacity: 0.625;
+            opacity: 0.125;
 
             @media(min-width: $nav_breakpoint){
                 opacity: 0.1;
             }
+        }
+
+        @media(min-width: $nav_breakpoint) {
+            place-content: center;
+            padding-top: unset;
+            background-position: right;
         }
     }
 
@@ -87,8 +123,8 @@
 
 
         .motion_text_wrapper {
-            margin-top: 1.5rem;
-            font-size: min(calc(2rem + 4vw), 6rem);
+            margin-top: 0;
+            font-size: min(calc(1rem + 2.25vw), 6rem);
 
             @media(min-width: $nav_breakpoint) {
                 margin-top: unset;
@@ -98,9 +134,14 @@
 
         .flex_half {
             max-width: 400px;
+            display: flex;
 
             @media(min-width: $nav_breakpoint){
                 max-width: unset;
+            }
+
+            > * {
+                flex: 0 0 50%;
             }
         }
     }
