@@ -183,6 +183,34 @@ if(function_exists('acf_add_local_field_group')){
 				'return_format'=>'url',
 				'library'=>'all'
 			],
+			[
+				'key'=>'field_smoke_honey_description',
+				'label'=>'Smoke \'n Honey Description',
+				'name'=>'smoke_honey_description',
+				'type'=>'textarea'
+			],
+			[
+				'key'=>'field_smoke_honey_url',
+				'label'=>'Smoke \'n Honey URL',
+				'name'=>'smoke_honey_url',
+				'type'=>'url'
+			],
+			[
+				'key'=>'field_smoke_honey_product_image',
+				'label'=>'Smoke \'n Honey Product Image',
+				'name'=>'smoke_honey_product_image',
+				'type'=>'image',
+				'return_format'=>'url',
+				'library'=>'all'
+			],
+			[
+				'key'=>'field_smoke_honey_ingredient_image',
+				'label'=>'Smoke \'n Honey Ingredient Image',
+				'name'=>'smoke_honey_ingredient_image',
+				'type'=>'image',
+				'return_format'=>'url',
+				'library'=>'all'
+			],
 		],
 		'menu_order'=>0,
 		'position'=>'acf_after_title',

@@ -377,6 +377,50 @@
         }
     }
 
+    &.smoke_honey {
+        color: #1195f0;
+
+        .button {
+            background-color: #1195f0;
+            color: #ffffff;
+            border-color: #1195f0;
+
+            &:focus-visible, &:hover {
+                color: #ffffff;
+                background: linear-gradient(#1195f0, darken(#1195f0, 10%));
+            }
+
+            &:focus-visible {
+                outline-color: #ffffff;
+            }
+        }
+
+        .heading_p1 {
+            font-weight: 500;
+            font-size: 67%;
+        }
+
+        @media(min-width: $nav_breakpoint) {
+            justify-content: flex-end;
+
+            .product_image_container {
+                order: 1;
+            }
+
+            .product_text_container {
+                order: 2;
+            }
+
+            .product_ingredient_container {
+                order: 3;
+            }
+        }
+
+        .product_ingredient_container > img {
+            margin-left: auto;
+        }
+    }
+
     @media(min-width: $nav_breakpoint) {
         display: flex;
         flex-direction: row;
