@@ -37,6 +37,8 @@ if ( !function_exists('aca_theme_setup') ) {
 			'product',
 			'recipe'
 		]);
+
+        add_theme_support('title-tag');
     }
 }
 add_action( 'after_setup_theme', 'aca_theme_setup' );

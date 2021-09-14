@@ -144,11 +144,11 @@ $breaker = get_field('breaker');
 				<img src="<?=get_field('chipotle_ingredient_image') ?: ''?>" alt="Ingredients.">
 			</div>
 		</div>
-		<div class="content_container homepage_product_container smoke_honey">
-			<div class="product_image_container">
+		<div class="content_container frontpage_product_container smoke_honey">
+			<div class="frontpage_product_image_container">
 				<img src="<?=get_field('smoke_honey_product_image') ?: ''?>" alt="Smoke 'n honey beef roll product packaging.">
 			</div>
-			<div class="product_text_container">
+			<div class="frontpage_product_text_container">
 				<h2><span class="heading_p1">Smoke 'n Honey</span><br/><span class="heading_p2">Beef Roll</span></h2>
 				<?php if($smoke_honey_description = get_field('smoke_honey_description')): ?>
 					<div class="product_description">
@@ -159,7 +159,7 @@ $breaker = get_field('breaker');
 					<a href="<?=get_field('smoke_honey_url') ?: '#'?>" class="button">Learn More</a>
 				</div>
 			</div>
-			<div class="product_ingredient_container">
+			<div class="frontpage_product_ingredient_container">
 				<img src="<?=get_field('smoke_honey_ingredient_image') ?: ''?>" alt="Ingredients.">
 			</div>
 		</div>
