@@ -41,6 +41,28 @@ $nutrition = get_field('nutritional_information');
                 </div>
                 <?php if($shop_url): ?>
                     <a href="<?=$shop_url?>" class="product_shop_button">Shop Online</a>
+                <?php else: ?>
+                    <?php
+                        $args = [
+                            'post_type' => 'page',
+                            'post_status' => 'publish',   
+                            'meta_query' => [
+                                [
+                                    'key' => '_wp_page_template',
+                                    'value' => 'where-to-buy.php',
+                                ]
+                            ],
+                            'posts_per_page'=>1
+                        ];
+                        $query = new WP_Query($args);
+                        if($query->have_posts()){
+                            $query->the_post();
+                            ?>
+                            <a href="<?php the_permalink(); ?>" class="product_shop_button">Buy Near You</a>
+                            <?php
+                            wp_reset_postdata();
+                        }
+                    ?>
                 <?php endif; ?>
                 <div class="meta_container">
                     <?php if($ingredients): ?>
