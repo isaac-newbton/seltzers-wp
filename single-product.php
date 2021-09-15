@@ -40,7 +40,7 @@ $nutrition = get_field('nutritional_information');
                     <?=$description?>
                 </div>
                 <?php if($shop_url): ?>
-                    <a href="<?=$shop_url?>" class="product_shop_button">Buy Near You</a>
+                    <a href="<?=$shop_url?>" class="product_shop_button">Shop Online</a>
                 <?php endif; ?>
                 <div class="meta_container">
                     <?php if($ingredients): ?>
