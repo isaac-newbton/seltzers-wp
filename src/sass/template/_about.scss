@@ -91,6 +91,12 @@
             margin-top: 7rem;
             max-width: 40ch;
             margin-left: 0;
+
+            .content {
+                max-height: 20em;
+                overflow-y: auto;
+                padding-inline-end: 1em;
+            }
         }
 
         &:last-child > .body {
