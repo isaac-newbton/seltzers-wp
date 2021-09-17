@@ -238,11 +238,11 @@
         @media(min-width: $nav_breakpoint) {
 
             .product_image_container {
-                order: 2;
+                order: 3;
             }
 
             .product_text_container {
-                order: 3;
+                order: 2;
             }
 
             .product_ingredient_container {
@@ -273,11 +273,11 @@
             justify-content: flex-end;
 
             .product_image_container {
-                order: 2;
+                order: 1;
             }
 
             .product_text_container {
-                order: 1;
+                order: 2;
             }
 
             .product_ingredient_container {
