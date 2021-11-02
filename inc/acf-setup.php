@@ -489,4 +489,70 @@ if(function_exists('acf_add_local_field_group')){
 			]
 		]
 	]);
+
+	acf_add_local_field_group([
+		'key'=>'group_retail_landing',
+		'title'=>'Retail Landing Page',
+		'fields'=>[
+			[
+				'key'=>'field_background',
+				'label'=>'Background',
+				'name'=>'background',
+				'type'=>'image',
+				'return_format'=>'url',
+				'library'=>'all',
+			],
+			[
+				'key'=>'field_hero',
+				'label'=>'Hero Image',
+				'name'=>'hero',
+				'type'=>'image',
+				'return_format'=>'url',
+				'library'=>'all',
+			],
+			[
+				'key'=>'field_retailer_image',
+				'label'=>'Retailer Image',
+				'name'=>'retailer_image',
+				'type'=>'image',
+				'return_format'=>'url',
+				'library'=>'all',
+			],
+			[
+				'key'=>'field_retailer_url',
+				'label'=>'Retailer URL',
+				'name'=>'retailer_url',
+				'type'=>'url'
+			],
+			[
+				'key'=>'field_product_image',
+				'label'=>'Product Image',
+				'name'=>'product_image',
+				'type'=>'image',
+				'return_format'=>'url',
+				'library'=>'all',
+			],
+			[
+				'key'=>'field_shop_now_text',
+				'label'=>'Shop Now Button Text',
+				'name'=>'shop_now_text',
+				'type'=>'text',
+			],
+			[
+				'key'=>'field_shop_now_url',
+				'label'=>'Shop Now Button URL',
+				'name'=>'shop_now_url',
+				'type'=>'url'
+			],
+		],
+		'location'=>[
+			[
+				[
+					'param'=>'page_template',
+					'operator'=>'==',
+					'value'=>'template-retail-landing.php',
+				],
+			],
+		],
+	]);
 }
