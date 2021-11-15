@@ -555,4 +555,41 @@ if(function_exists('acf_add_local_field_group')){
 			],
 		],
 	]);
+
+	acf_add_local_field_group([
+		'key'=>'group_product_category_settings',
+		'title'=>'Product Category Settings',
+		'fields'=>[
+			[
+				'key'=>'field_custom_banner',
+				'label'=>'Custom Banner',
+				'name'=>'custom_banner',
+				'type'=>'image',
+				'return_format'=>'url',
+				'library'=>'all',
+			],
+			[
+				'key'=>'field_custom_meta_title',
+				'label'=>'Custom Meta Title',
+				'name'=>'custom_meta_title',
+				'type'=>'text',
+			],
+			[
+				'key'=>'field_on_page_description',
+				'label'=>'On-page Description',
+				'name'=>'on_page_description',
+				'type'=>'textarea',
+			]
+		],
+		'location'=>[
+			[
+				[
+					'param'=>'taxonomy',
+					'operator'=>'==',
+					'value'=>'product_category',
+				],
+			],
+		],
+		'position'=>'normal'
+	]);
 }

@@ -19,23 +19,22 @@ if(0 < $category->count) {
     ]);
 }
 
+$acf_id = "product_category_$category->term_id";
+$custom_banner = get_field('custom_banner', $acf_id);
+$on_page_description = get_field('on_page_description', $acf_id);
+
 ?>
 
+<div class="products_header">
+    <img src="<?=$custom_banner ?: get_template_directory_uri() . '/assets/images/products-header-img.jpg'?>" alt="<?=$category->name?> products.">
+</div>
 <div class="background_container products_background">
-    <div class="products_header">
-        <img src="<?=get_template_directory_uri() . '/assets/images/products-header-img.jpg'?>" alt="Products.">
-        <a href="#product_header_scroll" id="product_header_scroll" class="scroll_next">
-            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 64 32">
-                <polyline points="16 8, 32 24, 48 8" stroke="#fff" stroke-width="1" fill="transparent" stroke-linecap="round" />
-            </svg>
-        </a>
-    </div>
     <?php get_template_part('template-parts/product', 'categories'); ?>
     <div class="content_container">
         <article id="term-<?=$category->term_id?>" class="product_category">
             <header>
                 <h1><?=$category->name?></h1>
-                <p><?=$category->description?></p>
+                <p><?=$on_page_description ?: $category->description?></p>
             </header>
             <?php if($query->have_posts()): ?>
                 <ul class="products">

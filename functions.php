@@ -4,6 +4,7 @@ define('ACA_FONTAWESOME_VERSION', '5.15.1');
 
 include_once ACA_INCLUDE_PATH . 'custom-post-types.php';
 include_once ACA_INCLUDE_PATH . 'acf-setup.php';
+include_once ACA_INCLUDE_PATH . 'aioseo-custom.php';
 
 if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';

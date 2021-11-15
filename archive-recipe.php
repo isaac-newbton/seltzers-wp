@@ -6,8 +6,10 @@ get_header();
  */
 
 ?>
-
 <div class="background_container recipe_background">
+    <div class="recipes_header">
+        <img src="<?=get_template_directory_uri() . '/assets/images/recipes-header-img.jpg'?>" alt="Recipes.">
+    </div>
     <header class="page-header">
         <h1>Recipes</h1>
     </header>

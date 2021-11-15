@@ -1,9 +1,47 @@
+.recipes_header {
+    position: relative;
+
+    > img {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .scroll_next {
+        z-index: 1;
+        position: absolute;
+        bottom: 1rem;
+        color: white;
+        font-size: 3rem;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        max-width: 5ch;
+        text-align: center;
+        border-radius: 0.5rem;
+        margin: 2rem auto;
+        line-height: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    
+        &:hover, &:focus-visible {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+    
+        &:focus-visible {
+            outline: 2px dotted white;
+        }
+    }
+}
+
 .background_container.recipe_background{
     background-position: top;
     background-size: cover;
     background-image: url(../images/recipe-wood-bg.jpg);
     background-attachment: fixed;
     margin-top: 0;
+    padding-top: 0;
 }
 
 article.recipe {
