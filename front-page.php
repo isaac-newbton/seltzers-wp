@@ -70,7 +70,7 @@ $breaker = get_field('breaker');
 	<div class="background_container" style="background-image: url(<?=get_stylesheet_directory_uri()?>/assets/images/seltzers-home-products-poster.jpg);">
 		<div class="content_container homepage_product_container original">
 			<div class="product_image_container">
-				<img src="<?=get_field('original_product_image') ?: ''?>" alt="Original product packaging.">
+				<img src="<?=get_field('original_product_image') ? get_field('original_product_image')['url'] : ''?>" alt="<?=get_field('original_product_image')['alt']?>">
 			</div>
 			<div class="product_text_container">
 				<h2>Original</h2>
@@ -84,12 +84,12 @@ $breaker = get_field('breaker');
 				</div>
 			</div>
 			<div class="product_ingredient_container">
-				<img src="<?=get_field('original_ingredient_image') ?: ''?>" alt="Ingredients.">
+				<img src="<?=get_field('original_ingredient_image') ? get_field('original_ingredient_image')['url'] : ''?>" alt="<?=get_field('original_ingredient_image')['alt']?>">
 			</div>
 		</div>
 		<div class="content_container homepage_product_container sweet">
 		<div class="product_image_container">
-				<img src="<?=get_field('sweet_product_image') ?: ''?>" alt="Sweet product packaging.">
+				<img src="<?=get_field('sweet_product_image') ? get_field('sweet_product_image')['url'] : ''?>" alt="<?=get_field('sweet_product_image')['alt']?>">
 			</div>
 			<div class="product_text_container">
 				<h2>Sweet</h2>
@@ -103,12 +103,12 @@ $breaker = get_field('breaker');
 				</div>
 			</div>
 			<div class="product_ingredient_container">
-				<img src="<?=get_field('sweet_ingredient_image') ?: ''?>" alt="Ingredients.">
+				<img src="<?=get_field('sweet_ingredient_image') ? get_field('sweet_ingredient_image')['url'] : ''?>" alt="<?=get_field('sweet_ingredient_image')['alt']?>">
 			</div>
 		</div>
 		<div class="content_container homepage_product_container db_smoked">
 			<div class="product_image_container">
-				<img src="<?=get_field('db_smoked_product_image') ?: ''?>" alt="Double smoked sweet product packaging.">
+				<img src="<?=get_field('db_smoked_product_image') ? get_field('db_smoked_product_image')['url'] : ''?>" alt="<?=get_field('db_smoked_product_image')['alt']?>">
 			</div>
 			<div class="product_text_container">
 				<h2><span class="heading_p1">Double</span><br/><span class="heading_p2">Smoked Sweet</span></h2>
@@ -122,12 +122,12 @@ $breaker = get_field('breaker');
 				</div>
 			</div>
 			<div class="product_ingredient_container">
-				<img src="<?=get_field('db_smoked_ingredient_image') ?: ''?>" alt="Ingredients.">
+				<img src="<?=get_field('db_smoked_ingredient_image') ? get_field('db_smoked_ingredient_image')['url'] : ''?>" alt="<?=get_field('db_smoked_ingredient_image')['alt']?>">
 			</div>
 		</div>
 		<div class="content_container homepage_product_container chipotle">
 			<div class="product_image_container">
-				<img src="<?=get_field('chipotle_product_image') ?: ''?>" alt="Sweet chipotle product packaging.">
+				<img src="<?=get_field('chipotle_product_image') ? get_field('chipotle_product_image')['url'] : ''?>" alt="<?=get_field('chipotle_product_image')['alt']?>">
 			</div>
 			<div class="product_text_container">
 				<h2><span class="heading_p1">Sweet</span><br/><span class="heading_p2">Chipotle</span></h2>
@@ -141,12 +141,12 @@ $breaker = get_field('breaker');
 				</div>
 			</div>
 			<div class="product_ingredient_container">
-				<img src="<?=get_field('chipotle_ingredient_image') ?: ''?>" alt="Ingredients.">
+				<img src="<?=get_field('chipotle_ingredient_image') ? get_field('chipotle_ingredient_image')['url'] : ''?>" alt="<?=get_field('chipotle_ingredient_image')['alt']?>">
 			</div>
 		</div>
 		<div class="content_container frontpage_product_container smoke_honey">
 			<div class="frontpage_product_image_container">
-				<img src="<?=get_field('smoke_honey_product_image') ?: ''?>" alt="Smoke 'n honey beef roll product packaging.">
+				<img src="<?=get_field('smoke_honey_product_image') ? get_field('smoke_honey_product_image')['url'] : ''?>" alt="<?=get_field('smoke_honey_product_image')['alt']?>">
 			</div>
 			<div class="frontpage_product_text_container">
 				<h2><span class="heading_p1">Smoke 'n Honey</span><br/><span class="heading_p2">Beef Roll</span></h2>
@@ -160,7 +160,7 @@ $breaker = get_field('breaker');
 				</div>
 			</div>
 			<div class="frontpage_product_ingredient_container">
-				<img src="<?=get_field('smoke_honey_ingredient_image') ?: ''?>" alt="Ingredients.">
+				<img src="<?=get_field('smoke_honey_ingredient_image') ? get_field('smoke_honey_ingredient_image')['url'] : ''?>" alt="<?=get_field('smoke_honey_ingredient_image')['alt']?>">
 			</div>
 		</div>
 	</div>

@@ -88,7 +88,7 @@ if(function_exists('acf_add_local_field_group')){
 				'label'=>'Original Product Image',
 				'name'=>'original_product_image',
 				'type'=>'image',
-				'return_format'=>'url',
+				'return_format'=>'array',
 				'library'=>'all'
 			],
 			[
@@ -96,7 +96,7 @@ if(function_exists('acf_add_local_field_group')){
 				'label'=>'Original Ingredient Image',
 				'name'=>'original_ingredient_image',
 				'type'=>'image',
-				'return_format'=>'url',
+				'return_format'=>'array',
 				'library'=>'all'
 			],
 			[
@@ -116,7 +116,7 @@ if(function_exists('acf_add_local_field_group')){
 				'label'=>'Sweet Product Image',
 				'name'=>'sweet_product_image',
 				'type'=>'image',
-				'return_format'=>'url',
+				'return_format'=>'array',
 				'library'=>'all'
 			],
 			[
@@ -124,7 +124,7 @@ if(function_exists('acf_add_local_field_group')){
 				'label'=>'Sweet Ingredient Image',
 				'name'=>'sweet_ingredient_image',
 				'type'=>'image',
-				'return_format'=>'url',
+				'return_format'=>'array',
 				'library'=>'all'
 			],
 			[
@@ -144,7 +144,7 @@ if(function_exists('acf_add_local_field_group')){
 				'label'=>'Smoked Product Image',
 				'name'=>'db_smoked_product_image',
 				'type'=>'image',
-				'return_format'=>'url',
+				'return_format'=>'array',
 				'library'=>'all'
 			],
 			[
@@ -152,7 +152,7 @@ if(function_exists('acf_add_local_field_group')){
 				'label'=>'Smoked Ingredient Image',
 				'name'=>'db_smoked_ingredient_image',
 				'type'=>'image',
-				'return_format'=>'url',
+				'return_format'=>'array',
 				'library'=>'all'
 			],
 			[
@@ -172,7 +172,7 @@ if(function_exists('acf_add_local_field_group')){
 				'label'=>'Chipotle Product Image',
 				'name'=>'chipotle_product_image',
 				'type'=>'image',
-				'return_format'=>'url',
+				'return_format'=>'array',
 				'library'=>'all'
 			],
 			[
@@ -180,7 +180,7 @@ if(function_exists('acf_add_local_field_group')){
 				'label'=>'Chipotle Ingredient Image',
 				'name'=>'chipotle_ingredient_image',
 				'type'=>'image',
-				'return_format'=>'url',
+				'return_format'=>'array',
 				'library'=>'all'
 			],
 			[
@@ -200,7 +200,7 @@ if(function_exists('acf_add_local_field_group')){
 				'label'=>'Smoke \'n Honey Product Image',
 				'name'=>'smoke_honey_product_image',
 				'type'=>'image',
-				'return_format'=>'url',
+				'return_format'=>'array',
 				'library'=>'all'
 			],
 			[
@@ -208,7 +208,7 @@ if(function_exists('acf_add_local_field_group')){
 				'label'=>'Smoke \'n Honey Ingredient Image',
 				'name'=>'smoke_honey_ingredient_image',
 				'type'=>'image',
-				'return_format'=>'url',
+				'return_format'=>'array',
 				'library'=>'all'
 			],
 		],
