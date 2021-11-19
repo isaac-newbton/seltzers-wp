@@ -1,6 +1,12 @@
 <?php
 get_header();
 
+$on_page_description = false;
+
+if(function_exists('aioseo')) {
+    $on_page_description = aioseo()->dynamicOptions->searchAppearance->archives->recipe->metaDescription;
+}
+
 /**
  * <main>
  */
@@ -12,6 +18,9 @@ get_header();
     </div>
     <header class="page-header">
         <h1>Recipes</h1>
+        <?php if($on_page_description): ?>
+            <div class="recipe_archive_description"><?=$on_page_description?></div>
+        <?php endif; ?>
     </header>
     <div class="content_container">
         <?php if(have_posts()): ?>
