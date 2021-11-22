@@ -21,6 +21,9 @@ $index = 0;
 ?>
 
 <div class="background_container about_background">
+    <div class="about_header">
+        <img src="<?=get_template_directory_uri()?>/assets/images/Smokehouse.jpg" alt="Smokehouse.">
+    </div>
     <?php if(have_rows('content_sections')): ?>
         <?php while(have_rows('content_sections')): the_row(); $image = get_sub_field('image'); $title = get_sub_field('title'); $content = get_sub_field('content'); ?>
             <section id="about-<?=$index?>" class="about_section">
