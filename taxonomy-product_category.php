@@ -29,13 +29,13 @@ $on_page_description = get_field('on_page_description', $acf_id);
     <img src="<?=$custom_banner ?: get_template_directory_uri() . '/assets/images/products-header-img.jpg'?>" alt="<?=$category->name?> products.">
 </div>
 <div class="background_container products_background">
-    <?php get_template_part('template-parts/product', 'categories'); ?>
     <div class="content_container">
         <article id="term-<?=$category->term_id?>" class="product_category">
             <header>
                 <h1><?=$category->name?></h1>
                 <p><?=$on_page_description ?: $category->description?></p>
             </header>
+            <?php get_template_part('template-parts/product', 'categories'); ?>
             <?php if($query->have_posts()): ?>
                 <ul class="products">
                     <?php while($query->have_posts()): $query->the_post(); ?>
