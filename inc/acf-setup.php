@@ -561,6 +561,14 @@ if(function_exists('acf_add_local_field_group')){
 		'title'=>'Product Category Settings',
 		'fields'=>[
 			[
+				'key'=>'field_preview_image',
+				'label'=>'Preview Image',
+				'name'=>'preview_image',
+				'type'=>'image',
+				'return_format'=>'array',
+				'library'=>'all',
+			],
+			[
 				'key'=>'field_custom_banner',
 				'label'=>'Custom Banner',
 				'name'=>'custom_banner',

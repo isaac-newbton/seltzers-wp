@@ -11,7 +11,7 @@ register_post_type('product', [
 		'thumbnail',
 		'title'
 	],
-	'has_archive'=>false
+	'has_archive'=>'products'
 ]);
 
 register_taxonomy('product_category', 'product', [

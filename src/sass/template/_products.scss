@@ -422,3 +422,51 @@ a.product_shop_button {
         }
     }
 }
+
+.post-type-archive-product .categories {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    @media(min-width: 1060px) {
+        justify-content: flex-start;
+    }
+
+    li {
+        margin: 1.5rem;
+        background-image: url(../images/wood-planks-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-color: #752;
+
+        > a {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            text-align: center;
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+
+            &:hover, &:focus {
+
+                img {
+                    -webkit-transition: -webkit-filter 150ms;
+                    transition: filter 150ms;
+                    -webkit-filter: contrast(25%) brightness(150%) grayscale(50%);
+                    filter: contrast(25%) brightness(150%) grayscale(50%);
+                }
+            }
+
+            &:focus-visible {
+                outline: 2px dotted white;
+            }
+        }
+    }
+}

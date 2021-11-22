@@ -24,23 +24,16 @@ $index = 0;
     <?php if(have_rows('content_sections')): ?>
         <?php while(have_rows('content_sections')): the_row(); $image = get_sub_field('image'); $title = get_sub_field('title'); $content = get_sub_field('content'); ?>
             <section id="about-<?=$index?>" class="about_section">
-                <header>
+                <div class="image_container">
+                    <img src="<?=$image?>" alt="<?=strip_tags($title)?>">
+                </div>
+                <div class="body">
                     <div class="title_container">
                         <?=0==$index ? "<h1>$title</h1>" : "<h2>$title</h2>"?>
                     </div>
-                    <img src="<?=$image?>" alt="<?=strip_tags($title)?>">
-                </header>
-                <div class="body">
                     <div class="content">
                         <?=$content?>
                     </div>
-                    <?php if($index < $sections_count - 1): ?>
-                        <a href="#about-<?=$index + 1?>" class="scroll_next">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 64 32">
-                                <polyline points="16 8, 32 24, 48 8" stroke="#fff" stroke-width="1" fill="transparent" stroke-linecap="round" />
-                            </svg>
-                        </a>
-                    <?php endif; ?>
                 </div>
             </section>
         <?php $index++; endwhile; ?>
