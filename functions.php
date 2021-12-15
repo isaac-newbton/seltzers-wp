@@ -90,10 +90,8 @@ add_filter( 'walker_nav_menu_start_el', 'aca_theme_add_arrow_to_parent_menu', 10
 
 function aca_duplicate_entry_cookie() {
     if(isset($_GET['entry_submission'])) {
-        $path = parse_url(get_option('siteurl'), PHP_URL_PATH);
-        $host = parse_url(get_option('siteurl'), PHP_URL_HOST);
         $expiry = strtotime('+1 month');
-        setcookie("entry-{$_GET['entry_submission']}", time(), $expiry, $path, $host);
+        setcookie('entry-' . $_GET['entry_submission'], time(), $expiry, '/', COOKIE_DOMAIN);
     }
 }
 add_action('init', 'aca_duplicate_entry_cookie');
