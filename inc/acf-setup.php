@@ -557,6 +557,116 @@ if(function_exists('acf_add_local_field_group')){
 	]);
 
 	acf_add_local_field_group([
+		'key'=>'group_farm_show_landing',
+		'title'=>'Farm Show Landing Page Settings',
+		'fields'=>[
+			[
+				'key'=>'field_background_image',
+				'label'=>'Background Image',
+				'name'=>'background',
+				'type'=>'image',
+				'return_format'=>'url',
+				'library'=>'all',
+			],
+			[
+				'key'=>'field_hero_image',
+				'label'=>'Hero Banner',
+				'name'=>'hero',
+				'type'=>'image',
+				'return_format'=>'array',
+				'library'=>'all',
+			],
+			[
+				'key'=>'field_form_url',
+				'label'=>'Form URL',
+				'name'=>'form_url',
+				'type'=>'url',
+				'required'=>true,
+			],
+			[
+				'key'=>'field_products_image',
+				'label'=>'Products Image',
+				'name'=>'products_image',
+				'type'=>'image',
+				'return_format'=>'array',
+				'library'=>'all',
+			],
+			[
+				'key'=>'field_prizes_image',
+				'label'=>'Prizes Image',
+				'name'=>'prizes_image',
+				'type'=>'image',
+				'return_format'=>'array',
+				'library'=>'all',
+			],
+			[
+				'key'=>'field_rules_page',
+				'label'=>'Rules Page',
+				'name'=>'rules_page',
+				'type'=>'page_link',
+				'post_type'=>['page'],
+				'required'=>true,
+			],
+			[
+				'key'=>'field_privacy_page',
+				'label'=>'Privacy Page',
+				'name'=>'privacy_page',
+				'type'=>'page_link',
+				'post_type'=>['page'],
+				'required'=>true,
+			],
+			[
+				'key'=>'field_thank_you_page',
+				'label'=>'Thank You Page',
+				'name'=>'thank_you_page',
+				'type'=>'page_link',
+				'post_type'=>['page'],
+				'required'=>true,
+			],
+		],
+		'location'=>[
+			[
+				[
+					'param'=>'page_template',
+					'operator'=>'==',
+					'value'=>'template-farm-show-landing.php',
+				],
+			],
+		],
+		'position'=>'normal',
+	]);
+
+	acf_add_local_field_group([
+		'key'=>'group_farm_show_landing_thankyou',
+		'title'=>'Farm Show Landing Page Settings',
+		'fields'=>[
+			[
+				'key'=>'field_header_text',
+				'label'=>'Header Text',
+				'name'=>'header_text',
+				'type'=>'wysiwyg',
+			],
+			[
+				'key'=>'field_landing_page',
+				'label'=>'Landing Page',
+				'name'=>'landing_page',
+				'type'=>'post_object',
+				'post_type'=>['page'],
+			],
+		],
+		'location'=>[
+			[
+				[
+					'param'=>'page_template',
+					'operator'=>'==',
+					'value'=>'template-farm-show-landing-thank-you.php',
+				],
+			],
+		],
+		'position'=>'normal',
+	]);
+
+	acf_add_local_field_group([
 		'key'=>'group_product_category_settings',
 		'title'=>'Product Category Settings',
 		'fields'=>[

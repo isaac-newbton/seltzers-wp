@@ -88,4 +88,22 @@ function aca_theme_add_arrow_to_parent_menu($output, $item, $depth, $args) {
 }
 add_filter( 'walker_nav_menu_start_el', 'aca_theme_add_arrow_to_parent_menu', 10, 4 );
 
+function aca_duplicate_entry_cookie() {
+    if(isset($_GET['entry_submission'])) {
+        $path = parse_url(get_option('siteurl'), PHP_URL_PATH);
+        $host = parse_url(get_option('siteurl'), PHP_URL_HOST);
+        $expiry = strtotime('+1 month');
+        setcookie("entry-{$_GET['entry_submission']}", time(), $expiry, $path, $host);
+    }
+}
+add_action('init', 'aca_duplicate_entry_cookie');
+
+function aca_duplicate_entry_page() {
+    if(isset($_COOKIE['entry-' . get_the_ID()]) && ($thank_you_page = get_field('thank_you_page', get_the_ID())) ) {
+        wp_redirect($thank_you_page, 301);
+        exit;
+    }
+}
+add_action('template_redirect', 'aca_duplicate_entry_page');
+
 require_once get_template_directory() . '/inc/admin.php';
