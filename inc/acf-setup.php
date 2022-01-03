@@ -720,7 +720,7 @@ if(function_exists('acf_add_local_field_group')){
 				'key'=>'field_cta_url',
 				'label'=>'CTA URL',
 				'name'=>'cta_url',
-				'type'=>'URL',
+				'type'=>'url',
 			],
 		],
 		'location'=>[
