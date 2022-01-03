@@ -1,4 +1,4 @@
-.page-template-template-farm-show-landing, .page-template-template-farm-show-landing-thank-you {
+.page-template-template-farm-show-landing, .page-template-template-farm-show-landing-thank-you, .page-template-template-farm-show-pre-landing {
 
     .site-main {
         margin-bottom: 0;
@@ -18,7 +18,7 @@
     }
 }
 
-.farm_show_background {
+.farm_show_background, .pre_farm_show_background {
     background-size: cover;
     background-position: bottom;
     padding-top: max(10vh, 4rem);
@@ -209,6 +209,99 @@
 
         .entry_form_container {
             max-width: 36ch;
+        }
+    }
+}
+
+.pre_farm_show_background {
+
+    header h1 {
+        text-align: center;
+        text-shadow: 0 1px 6px #f75a21;
+        font-size: min(6.5rem, calc(0.5rem + 5vw));
+
+        + img {
+            margin-bottom: 3rem;
+        }
+    }
+
+    .content {
+        text-align: center;
+        font-size: 150%;
+    }
+
+    .cta_container {
+        margin-top: 5rem;
+    }
+
+    .content_and_social {
+        margin-bottom: 5rem;
+    }
+
+    .large_screen_container {
+        display: none;
+    }
+
+    .background_container {
+        display: block;
+        width: 100% !important;
+        max-width: 1800px;
+        margin: 0 auto;
+        max-height: unset !important;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        > * {
+            width: 100%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    @media(min-width: 1800px) {
+        header h1 {
+            font-size: 3.8rem;
+        }
+
+        .large_screen_container {
+            display: block;
+        }
+
+        .small_screen_container {
+            display: none;
+        }
+
+        .content {
+            font-size: 100%;
+        }
+
+        .content_and_social {
+            margin-bottom: unset;
+            margin-top: 2.5rem;
+        }
+
+        .cta_container {
+            margin-top: 3rem;
+        }
+
+        .background_container {
+            display: flex;
+            flex-flow: row nowrap;
+            padding-left: 0;
+            padding-right: 0;
+
+            > * {
+                width: unset;
+                max-width: unset;
+                order: unset !important;
+                padding: 0 max(20px, 2.5vw);
+
+                img {
+                    max-width: 100%;
+                    margin: 0 auto;
+                }
+            }
         }
     }
 }
