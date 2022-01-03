@@ -667,6 +667,75 @@ if(function_exists('acf_add_local_field_group')){
 	]);
 
 	acf_add_local_field_group([
+		'key'=>'group_farm_show_pre_landing',
+		'title'=>'Farm Show Pre-Landing Page Settings',
+		'fields'=>[
+			[
+				'key'=>'field_background_image',
+				'label'=>'Background Image',
+				'name'=>'background',
+				'type'=>'image',
+				'return_format'=>'url',
+				'library'=>'all',
+			],
+			[
+				'key'=>'field_before_hero_text',
+				'label'=>'Before Hero Text',
+				'name'=>'before_hero_text',
+				'type'=>'text',
+			],
+			[
+				'key'=>'field_hero_image',
+				'label'=>'Hero Banner',
+				'name'=>'hero',
+				'type'=>'image',
+				'return_format'=>'array',
+				'library'=>'all',
+			],
+			[
+				'key'=>'field_products_image',
+				'label'=>'Products Image',
+				'name'=>'products_image',
+				'type'=>'image',
+				'return_format'=>'array',
+				'library'=>'all',
+			],
+			[
+				'key'=>'field_prizes_image',
+				'label'=>'Prizes Image',
+				'name'=>'prizes_image',
+				'type'=>'image',
+				'return_format'=>'array',
+				'library'=>'all',
+			],
+			[
+				'key'=>'field_cta_image',
+				'label'=>'CTA Image',
+				'name'=>'cta_image',
+				'type'=>'image',
+				'return_format'=>'array',
+				'library'=>'all',
+			],
+			[
+				'key'=>'field_cta_url',
+				'label'=>'CTA URL',
+				'name'=>'cta_url',
+				'type'=>'URL',
+			],
+		],
+		'location'=>[
+			[
+				[
+					'param'=>'page_template',
+					'operator'=>'==',
+					'value'=>'template-farm-show-pre-landing.php',
+				],
+			],
+		],
+		'position'=>'normal',
+	]);
+
+	acf_add_local_field_group([
 		'key'=>'group_product_category_settings',
 		'title'=>'Product Category Settings',
 		'fields'=>[
